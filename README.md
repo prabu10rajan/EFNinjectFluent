@@ -1,5 +1,5 @@
 # EFNinjectFluent
-Learning Project. Work in progress...
+Study Project.
 
 Overview :-
 
