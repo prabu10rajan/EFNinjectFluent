@@ -1,5 +1,4 @@
 # EFNinjectFluent
-Study Project.
 
 Overview :-
 
