@@ -1,0 +1,2 @@
+D:\Sample Projects\Visual Studio Projects\Ninject Fluen EF WebApi\EFNinjectFluentWebApi\Project.BussinessLayer\obj\Debug\Project.BusinessLayer.csprojAssemblyReference.cache
+D:\Sample Projects\Visual Studio Projects\Ninject Fluen EF WebApi\EFNinjectFluentWebApi\Project.BussinessLayer\obj\Debug\Project.BusinessLayer.csproj.CoreCompileInputs.cache

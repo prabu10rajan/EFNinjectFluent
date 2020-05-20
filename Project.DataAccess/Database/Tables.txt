@@ -1,0 +1,58 @@
+﻿CREATE TABLE Products
+(
+ProductID		INT NOT NULL PRIMARY KEY
+,ProductName	VARCHAR(40) NOT NULL
+,SupplierID		INT NULL
+,CategoryID		INT NULL
+,QuantityPerUnit		VARCHAR(20) NULL
+,UnitPrice		MONEY
+,UnitsInStock	SMALLINT
+,UnitsInOrder	SMALLINT
+,IsDiscontinued BIT NOT NULL
+)
+
+
+CREATE TABLE Supplier
+(
+SupplierID		INT NOT NULL PRIMARY KEY
+,SupplierName	VARCHAR(40)
+)
+
+CREATE TABLE Category
+(
+CategoryID		INT NOT NULL PRIMARY KEY
+,CategoryName	VARCHAR(40)
+)
+
+ALTER TABLE Products
+ADD CONSTRAINT FK_SupplierID
+FOREIGN KEY (SupplierID) REFERENCES Supplier(SupplierID);
+
+ALTER TABLE Products
+ADD CONSTRAINT FK_CategoryID
+FOREIGN KEY (CategoryID) REFERENCES Category(CategoryID);
+
+INSERT INTO Category
+SELECT 1,'Fruit'
+INSERT INTO Category
+SELECT 2,'Vegetable'
+INSERT INTO Category
+SELECT 3,'Cholocates'
+
+INSERT INTO Supplier
+SELECT 1,'Green World'
+INSERT INTO Supplier
+SELECT 2,'Nestle'
+
+INSERT INTO Products
+SELECT 1,'Apple',1,1,10,2,3,4,0
+INSERT INTO Products
+SELECT 2,'Tomato',1,2,10,2,3,4,0
+INSERT INTO Products
+SELECT 3,'Orange',1,1,10,2,3,4,0
+INSERT INTO Products
+SELECT 4,'Potato',1,2,10,2,3,4,0
+INSERT INTO Products
+SELECT 5,'Dairy Milk',2,3,10,2,3,4,0
+INSERT INTO Products
+SELECT 6,'5 Star',2,3,10,2,3,4,0
